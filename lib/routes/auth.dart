@@ -177,7 +177,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   String get phoneNumber {
     String unmaskedText = _maskedPhoneKey.currentState.unmaskedText;
-    String formatted = "+55$unmaskedText".trim();
+    String formatted = "+351$unmaskedText".trim();
     return formatted;
   }
 
@@ -309,7 +309,7 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget _buildPhoneNumberInput() {
     return MaskedTextField(
       key: _maskedPhoneKey,
-      mask: "+351xxxxxxxxx",
+      mask: "xxx xxx xxx",
       keyboardType: TextInputType.number,
       maskedTextFieldController: phoneNumberController,
       maxLength: 20,
@@ -329,7 +329,7 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
         labelText: "Phone",
         labelStyle: decorationStyle,
-        hintText: "+351999999999",
+        hintText: "999 999 999",
         hintStyle: hintStyle,
         errorText: _errorMessage,
       ),
@@ -451,7 +451,7 @@ class _AuthScreenState extends State<AuthScreen> {
   String _phoneInputValidator() {
     if (phoneNumberController.text.isEmpty) {
       return "Your phone number can't be empty!";
-    } else if (phoneNumberController.text.length < 15) {
+    } else if (phoneNumberController.text.length < 9) {
       return "This phone number is invalid!";
     }
     return null;
