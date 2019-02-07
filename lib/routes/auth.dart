@@ -309,10 +309,10 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget _buildPhoneNumberInput() {
     return MaskedTextField(
       key: _maskedPhoneKey,
-      mask: "(xx) xxxxx-xxxx",
+      mask: "+351xxxxxxxxx",
       keyboardType: TextInputType.number,
       maskedTextFieldController: phoneNumberController,
-      maxLength: 15,
+      maxLength: 20,
       onSubmitted: (text) => _updateRefreshing(true),
       style: Theme
           .of(context)
@@ -329,7 +329,7 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
         labelText: "Phone",
         labelStyle: decorationStyle,
-        hintText: "(99) 99999-9999",
+        hintText: "+351999999999",
         hintStyle: hintStyle,
         errorText: _errorMessage,
       ),
