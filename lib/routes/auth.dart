@@ -312,7 +312,7 @@ class _AuthScreenState extends State<AuthScreen> {
       mask: "xxx xxx xxx",
       keyboardType: TextInputType.number,
       maskedTextFieldController: phoneNumberController,
-      maxLength: 20,
+      maxLength: 9,
       onSubmitted: (text) => _updateRefreshing(true),
       style: Theme
           .of(context)
